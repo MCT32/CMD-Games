@@ -12,23 +12,27 @@ def playTicTacToe():
         for x in range(3):
             for y in range(3):
                 if places[x][y] == 0:
-                    placesText[x][y] = "a"
+                    placesText[x][y] = " "
                 elif places[x][y] == 1:
-                    placesText[x][y] = "x"
+                    placesText[x][y] = "X"
                 elif places[x][y] == 2:
-                    placesText[x][y] = "o"
+                    placesText[x][y] = "O"
 
-    generatePlacesText()
-    print("  ____ _____ ____\n" +
-          " /    |     |    \\\n" +
-          "|  " + placesText[0][0] + "  |  " + placesText[0][1] + "  |  " + placesText[0][2] + "  |\n" +
-          "|_____|_____|_____|\n" +
-          "|     |     |     |\n" +
-          "|  " + placesText[1][0] + "  |  " + placesText[1][1] + "  |  " + placesText[1][2] + "  |\n" +
-          "|_____|_____|_____|\n" +
-          "|     |     |     |\n" +
-          "|  " + placesText[2][0] + "  |  " + placesText[2][1] + "  |  " + placesText[2][2] + "  |\n" +
-          " \\____|_____|____/\n")
+    def printGrid():
+        generatePlacesText()
+        print("  ____ _____ ____\n" +
+              " /    |     |    \\\n" +
+              "|  " + placesText[0][0] + "  |  " + placesText[0][1] + "  |  " + placesText[0][2] + "  |\n" +
+              "|_____|_____|_____|\n" +
+              "|     |     |     |\n" +
+              "|  " + placesText[1][0] + "  |  " + placesText[1][1] + "  |  " + placesText[1][2] + "  |\n" +
+              "|_____|_____|_____|\n" +
+              "|     |     |     |\n" +
+              "|  " + placesText[2][0] + "  |  " + placesText[2][1] + "  |  " + placesText[2][2] + "  |\n" +
+              " \\____|_____|____/\n")
+
+    gameWon = False
+    printGrid()
 
 init()
 print(Style.RESET_ALL + "   _____ __  __ _____          _____\n" +
