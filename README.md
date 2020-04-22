@@ -1,2 +1,7 @@
 # CMD-Games
-A collection of games for command prompt.
+A python based collection of games for command prompt.
+
+## Features
+
+
+## Do-to
