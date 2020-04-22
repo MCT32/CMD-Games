@@ -9,14 +9,14 @@ def playTicTacToe():
                   ["","",""]]
 
     def generatePlacesText():
-        for x in range(0,2):
-            for y in range(0,2):
+        for x in range(3):
+            for y in range(3):
                 if places[x][y] == 0:
-                    placesText = " "
+                    placesText[x][y] = "a"
                 elif places[x][y] == 1:
-                    placesText = "x"
+                    placesText[x][y] = "x"
                 elif places[x][y] == 2:
-                    placesText = "o"
+                    placesText[x][y] = "o"
 
     generatePlacesText()
     print("  ____ _____ ____\n" +
@@ -24,10 +24,10 @@ def playTicTacToe():
           "|  " + placesText[0][0] + "  |  " + placesText[0][1] + "  |  " + placesText[0][2] + "  |\n" +
           "|_____|_____|_____|\n" +
           "|     |     |     |\n" +
-          "|     |     |     |\n" +
+          "|  " + placesText[1][0] + "  |  " + placesText[1][1] + "  |  " + placesText[1][2] + "  |\n" +
           "|_____|_____|_____|\n" +
           "|     |     |     |\n" +
-          "|     |     |     |\n" +
+          "|  " + placesText[2][0] + "  |  " + placesText[2][1] + "  |  " + placesText[2][2] + "  |\n" +
           " \\____|_____|____/\n")
 
 init()
